@@ -1,4 +1,9 @@
-# Javascript-practice
-Implement a simple HTML and javascript website that  will display employee Information using Array methods. 
-employs buttons to trigger functions such as displaying all employees, calculating total salaries, filtering and displaying HR department employees, and finding employees by their IDs. 
-use JavaScript functions to generate dynamic lists of employees utilising array methods like forEach, filter, reduce, and find to manage and present data interactively. 
+## Practice Projects
+
+A collection of small JavaScript projects built to practice and reinforce core JS concepts
+such as DOM manipulation, async programming, fetch API, and event handling.
+
+Each project is self-contained in its own folder with its own HTML, CSS, and JS files.
+Feel free to browse, clone, or use any project as a reference for your own learning.
+
+> This repo is a work in progress and will be updated as new projects are added.
