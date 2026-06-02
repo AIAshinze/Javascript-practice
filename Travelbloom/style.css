@@ -414,6 +414,250 @@ ul {
 }
 
 /* =====================
+   PAGE HERO (About & Contact)
+   ===================== */
+.page-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('./images/darkmoon_art-fantasy-3502188_1280.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+  padding-top: calc(var(--nav-h) + 3rem);
+  overflow: hidden;
+}
+
+.page-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem 7rem 4rem;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+/* =====================
+   ABOUT US — Description Box
+   ===================== */
+.about-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  border-radius: 6px;
+  padding: 1.8rem 2rem;
+  max-width: 860px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.about-box p {
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+
+.about-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================
+   ABOUT US — Team Section
+   ===================== */
+.team-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.team-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.05;
+  flex-shrink: 0;
+}
+
+.team-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 160px;
+}
+
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.team-card:hover .team-avatar {
+  background: var(--teal);
+  transform: scale(1.08);
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.team-desc {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.team-role {
+  display: inline-block;
+  padding: 0.3rem 1.1rem;
+  background: var(--teal);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 25px;
+  letter-spacing: 0.04em;
+}
+
+/* =====================
+   CONTACT US — Layout
+   ===================== */
+.contact-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.contact-left {
+  flex-shrink: 0;
+}
+
+.contact-tagline {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+/* =====================
+   CONTACT US — Form Box
+   ===================== */
+.contact-form-box {
+  flex: 1;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.65rem 1rem;
+  border-radius: 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--teal-light);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.78rem;
+  background: var(--teal);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-submit:hover {
+  background: var(--teal-light);
+  transform: translateY(-2px);
+}
+
+/* =====================
    RESPONSIVE
    ===================== */
 @media (max-width: 900px) {
@@ -458,5 +702,14 @@ ul {
 
   .result-section {
     padding: 2rem 1.5rem;
+  }
+
+  .page-content {
+    padding: 1.5rem 1.8rem 3rem;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
