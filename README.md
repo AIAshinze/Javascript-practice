@@ -1,4 +1,4 @@
-## Practice Projects
+# Practice Projects
 
 A collection of small JavaScript projects built to practice and reinforce core JS concepts
 such as DOM manipulation, async programming, fetch API, and event handling.
