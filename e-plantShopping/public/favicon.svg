@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1b4332" />
+      <stop offset="45%" stop-color="#2d6a4f" />
+      <stop offset="100%" stop-color="#52b788" />
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#081c15" />
+      <stop offset="100%" stop-color="#1b4332" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#1b4332" flood-opacity="0.12" />
+    </filter>
+  </defs>
+  <!-- Background Circle with Soft Green Shadow -->
+  <circle cx="256" cy="256" r="230" fill="#ffffff" filter="url(#dropShadow)" />
+  <circle cx="256" cy="256" r="215" fill="#d8f3dc" opacity="0.25" />
+  
+  <!-- Elegant Monstera/Palm Leaf Silhouette -->
+  <g transform="translate(256, 256) rotate(-15) translate(-256, -256)">
+    <!-- Primary Leaf Body -->
+    <path d="M256,70 C340,70 410,140 410,230 C410,320 340,390 256,390 C172,390 102,320 102,230 C102,140 172,70 256,70 Z" fill="url(#leafGrad)" />
+    
+    <!-- Cutouts for Monstera Look -->
+    <!-- Left Cut 1 -->
+    <path d="M90,180 Q160,190 190,210 Q160,230 90,220 Z" fill="#ffffff" />
+    <!-- Left Cut 2 -->
+    <path d="M100,270 Q170,265 195,275 Q165,305 110,320 Z" fill="#ffffff" />
+    <!-- Right Cut 1 -->
+    <path d="M422,180 Q352,190 322,210 Q352,230 422,220 Z" fill="#ffffff" />
+    <!-- Right Cut 2 -->
+    <path d="M412,270 Q342,265 317,275 Q347,305 402,320 Z" fill="#ffffff" />
+    
+    <!-- Stem and Center Vein -->
+    <path d="M250,442 C250,442 254,340 256,230 C258,120 262,70 262,70 L250,70 C250,70 254,120 252,230 C250,340 242,442 242,442 Z" fill="url(#stemGrad)" />
+    
+    <!-- Lateral Veins -->
+    <path d="M256,150 Q310,130 360,120" stroke="#d8f3dc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M256,150 Q202,130 152,120" stroke="#d8f3dc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M256,220 Q325,210 380,215" stroke="#d8f3dc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M256,220 Q187,210 132,215" stroke="#d8f3dc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M256,290 Q325,290 370,310 M256,290 Q187,290 142,310" stroke="#d8f3dc" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6" />
+  </g>
+</svg>
